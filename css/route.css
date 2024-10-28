@@ -29,6 +29,7 @@ body {
     border-radius: 5px;
     margin: 10px;
     overflow-y: auto;
+    z-index: 10;
 }
 
 fieldset {
@@ -38,4 +39,16 @@ fieldset {
 legend {
     font-size: 20px;
     font-weight: bold;
+}
+
+.button-container {
+    display: flex;           /* Use flexbox for alignment */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 50px;       /* Space above the button container */
+}
+
+.button-container button {
+    margin: 0 10px; /* Space between buttons */
+    padding: 10px 20px; /* Add padding to buttons for a better appearance */
+    font-size: 16px; /* Increase font size for visibility */
 }
