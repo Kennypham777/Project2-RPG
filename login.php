@@ -46,7 +46,7 @@ if (isset($_GET['username'])) {
 
     // Set session for the user and redirect
     $_SESSION['username'] = $username; // Store the username in session
-    header('Location: char1route.php'); //temporary redirect
+    header('Location: opening.html'); //temporary redirect
     exit();
 }
 
@@ -61,7 +61,6 @@ if (isset($_GET['username'])) {
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-
 <div class="container">
     <h2>Login</h2>
     <form action="login.php" method="GET">
@@ -72,6 +71,5 @@ if (isset($_GET['username'])) {
     <p class="error"><?php echo $loginError; ?></p>
     <p>Don't have an account? <a href="signup.php">Sign up here</a></p>
 </div>
-
 </body>
 </html>
