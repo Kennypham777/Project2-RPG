@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/selection.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.char-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.char{
+    width: 65%;
+    height: 65%;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+.select{
+    width: 55%;
+    height: 55%;
+    margin-left: 20%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.select:hover{
+    transform: scale(1.1);
+}
+.button{
+    padding: 10px;
+}

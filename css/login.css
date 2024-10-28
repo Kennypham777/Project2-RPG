@@ -4,8 +4,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
     margin: 0;
+    background-image: url("../img/login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Center the container and style it */
@@ -14,10 +16,11 @@ body {
     margin: 100px auto;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    opacity: 0.9;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-
     position: relative; /* Make the container positionable */
     top: -20%; /* Move it up by 20% */
 }
