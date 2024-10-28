@@ -45,8 +45,8 @@ if (isset($_GET['username'])) {
     }
 
     // Set session for the user and redirect
-    $_SESSION['username'] = $username;
-    header('Location: home.php'); //home.php is temporary right now
+    $_SESSION['username'] = $username; // Store the username in session
+    header('Location: char1route.php'); //home.php is temporary right now
     exit();
 }
 
