@@ -12,9 +12,6 @@ $hearts = $_SESSION['hearts'];
 $goodEndings = $_SESSION['good_endings'];
 $badEndings = $_SESSION['bad_endings'];
 
-// Determine if the ending was good or bad
-$isBadEnding = $hearts <= 0; // True if hearts are 0 or less
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,11 +29,14 @@ $isBadEnding = $hearts <= 0; // True if hearts are 0 or less
         <p><strong>Good Endings:</strong> <?php echo $goodEndings; ?></p>
         <p><strong>Bad Endings:</strong> <?php echo $badEndings; ?></p>
         
-        <?php if ($isBadEnding): ?>
-            <p class="ending-status">You reached a bad ending.</p>
+        <!-- Determine and display the ending status -->
+        <?php if (isset($_SESSION['ending_status']) && $_SESSION['ending_status'] === 'bad'): ?>
+            <p>You reached a bad ending.</p>
         <?php else: ?>
-            <p class="ending-status">You reached a good ending!</p>
+            <p>You reached a good ending!</p>
         <?php endif; ?>
+
+        <?php unset($_SESSION['ending_status']); // Clear the ending status after displaying ?>
     </div>
     
     <div class="options">

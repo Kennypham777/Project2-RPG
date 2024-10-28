@@ -16,10 +16,16 @@ if (isset($heartsChange)) {
     if ($_SESSION['hearts'] <= 0) {
         $_SESSION['bad_endings']++;
 
+        // Set ending status to 'bad'
+        $_SESSION['ending_status'] = 'bad';
+
         unset($_SESSION['currentNode']); // Remove the session variable
         $_SESSION['hearts'] = 5; // Reset hearts
         header('Location: char1ending.php');
         exit();
+    } else {
+        // Set ending status to 'good' if hearts are above 0
+        $_SESSION['ending_status'] = 'good';
     }
 }
 ?>
