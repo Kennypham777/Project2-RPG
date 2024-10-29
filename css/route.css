@@ -46,7 +46,7 @@ legend {
 .button-container {
     display: flex;           /* Use flexbox for alignment */
     justify-content: center; /* Center the buttons horizontally */
-    margin-top: 50px;       /* Space above the button container */
+    margin-top: 5%;       /* Space above the button container */
 }
 
 .button-container button {
