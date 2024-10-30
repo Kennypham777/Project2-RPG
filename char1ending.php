@@ -19,11 +19,13 @@ $badEndings = $_SESSION['bad_endings'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Ending</title>
-    <link rel="stylesheet" href=""> <!--link to css in href-->
+    <link rel="stylesheet" href="css/char1ending.css"><!--link to css in href-->
 </head>
 <body>
-    <div class=""> <!--Can be styled with a class-->
-        <h1>Game Ending</h1>
+<div class="game-end">Game End</div>
+    <div class="endscreen"> <!--Can be styled with a class-->
+        
+        <h1>Leaderboard</h1>
         <!--display stats of current user-->
         <p><strong>User:</strong> <?php echo htmlspecialchars($username); ?></p>
         <p><strong>Good Endings:</strong> <?php echo $goodEndings; ?></p>
