@@ -1,4 +1,5 @@
 body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -8,11 +9,13 @@ body {
 
 .scoreboard {
     background-color: rgba(0,0,0,0.75);
+    border-radius: 5px;
     color: white;
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 24px;
+    padding: 12px;
 }
 
 .hearts {
@@ -40,17 +43,33 @@ fieldset {
 
 legend {
     font-size: 20px;
+    color: #FFD700;
     font-weight: bold;
 }
 
 .button-container {
     display: flex;           /* Use flexbox for alignment */
     justify-content: center; /* Center the buttons horizontally */
-    margin-top: 5%;       /* Space above the button container */
+    margin-top: 3%;       /* Space above the button container */
 }
 
 .button-container button {
     margin: 0 10px; /* Space between buttons */
-    padding: 10px 20px; /* Add padding to buttons for a better appearance */
+    /*padding: 10px 20px; /* Add padding to buttons for a better appearance */
     font-size: 16px; /* Increase font size for visibility */
+
+    background-color: #5b3114;
+    color: #FFFFFF;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 12px 24px;
+    /*font-size: 1em;*/
+    cursor: pointer;
+    font-family: 'Cinzel Decorative', serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* Button hover effect */
+button:hover {
+    background-color: #FF6347;
+    transform: scale(1.1);
 }
