@@ -33,9 +33,9 @@ $badEndings = $_SESSION['bad_endings'];
         
         <!-- Determine and display the ending status -->
         <?php if (isset($_SESSION['ending_status']) && $_SESSION['ending_status'] === 'bad'): ?>
-            <p>You reached a bad ending.</p>
+            <p>You were subdued by bandits and have reached a bad ending.</p>
         <?php else: ?>
-            <p>You reached a good ending!</p>
+            <p>You and Ariel set off to whatever adventure awaits you next. Good ending!</p>
         <?php endif; ?>
 
         <?php unset($_SESSION['ending_status']); // Clear the ending status after displaying ?>
