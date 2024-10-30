@@ -1,0 +1,115 @@
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../img/leaderboard.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.game-end {
+    font-size: 3.5em;
+    color: #FFD700;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.8),   
+        0 0 20px rgba(255, 215, 0, 0.6),   
+        0 0 5px rgba(0, 0, 0, 0.6);        
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+/* Glow effect animation */
+@keyframes pulse {
+    from {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+    }
+    to {
+        text-shadow: 0 0 20px rgb(50, 10, 10), 0 0 30px rgba(0, 0, 0, 0.8), 0 0 40px rgba(97, 31, 9, 0.68);
+    }
+}
+
+
+.endscreen {
+    background-color: rgba(60, 60, 30, 0.8); 
+    border: 4px double #8B4513;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px; 
+}
+
+
+.endscreen h1 {
+    font-size: 2.5em;
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700;
+    margin-bottom: 20px;
+    font-family: 'Cinzel Decorative', serif; 
+}
+
+
+.endscreen p {
+    font-size: 1.2em;
+    color: #D3D3D3;
+    margin: 10px 0;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+
+.endscreen p strong {
+    color: #FFFFFF;
+}
+
+
+.endscreen p:nth-last-child(2) {
+    font-size: 1.3em;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Container for options buttons at the bottom */
+.options {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+/* Styling for buttons */
+button {
+    background-color: #5b3114;
+    color: #FFFFFF;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Cinzel Decorative', serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #FF6347;
+    transform: scale(1.1);
+}
