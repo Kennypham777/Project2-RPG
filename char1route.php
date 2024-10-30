@@ -49,7 +49,8 @@ if (isset($heartsChange)) {
             height: 75vh; /* Set height to 75% of viewport height */
             position: absolute;
             bottom: 0; /* Align the bottom edge of the image with the bottom of the viewport */
-            left: 5%; /* Adjust left positioning */
+            left: 50%; /* Set left to 50% */
+            transform: translateX(-50%); /* Shift the element left by 50% of its width to center it */
             z-index: 2;
         }
 
