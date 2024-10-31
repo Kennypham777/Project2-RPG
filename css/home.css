@@ -29,4 +29,55 @@ body{
 }
 .button{
     padding: 10px;
+    padding-bottom: 0px;
+}
+.game-rule{
+    width: 40%;
+    height: 40%;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.game-rule::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(60, 60, 30, 0.8); 
+    border: 4px double #8B4513;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+    z-index: -1; 
+}
+.rule{
+    text-align: center;
+    animation: appear 4s ease-in;
+}
+.rule h2{
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700;
+    margin-bottom: 20px;
+    font-family: 'Cinzel Decorative', serif; 
+}
+.rule h3{
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700;
+    margin-bottom: 20px;
+    font-family: 'Cinzel Decorative', serif; 
+}
+.rule p{
+    color: #D3D3D3;
+    font-family: 'Cinzel Decorative', serif;
+    text-align: justify;
+}
+@keyframes appear{
+    0% {opacity: 0;}
+    20% {opacity: 0.2;}
+    40% {opacity: 0.4;}
+    60% {opacity: 0.6;}
+    80% {opacity: 0.8;}
+    100% {opacity: 1;}
 }
