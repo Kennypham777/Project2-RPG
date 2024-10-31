@@ -14,9 +14,9 @@ body{
 }
 .game-title{
     font-family: 'Brush Script MT';
-    color: white;
-    font-size: 100px;
-    text-shadow: 8px 8px rgba(14, 14, 164, 0.668);
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700;
+    font-size: 150px;
     animation: pop-in-out 3s infinite;
 }
 .play{
