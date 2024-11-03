@@ -36,14 +36,18 @@ class Node {
     public $background;
     public $foreground;
     public $heartsChange;
+    public $audioFile;
 
     // Constructor for nodes/branches, NOTE the order of things
-    public function __construct($characterName, $dialogue, $background, $foreground, $heartsChange = 0) {
+    public function __construct($characterName, $dialogue, $audioFile, $background, $foreground, $heartsChange = 0, ) {
         $this->characterName = $characterName;
         $this->dialogue = $dialogue;
+        $this->audioFile = $audioFile;
         $this->background = $background;
         $this->foreground = $foreground;
         $this->heartsChange = $heartsChange;
+       
+       
     }
 
     // Add options (choices) to the node

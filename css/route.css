@@ -29,7 +29,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 98.8%;
-    padding: 10px;
+    padding: 10px 10px;
     box-sizing: border-box;
     border-radius: 5px;
     margin: 10px;
@@ -50,7 +50,7 @@ legend {
 .button-container {
     display: flex;           /* Use flexbox for alignment */
     justify-content: center; /* Center the buttons horizontally */
-    margin-top: 3%;       /* Space above the button container */
+    margin-top: 0;       /* Space above the button container */
 }
 
 .button-container button {
@@ -62,7 +62,7 @@ legend {
     color: #FFFFFF;
     border: 2px solid #FFD700;
     border-radius: 8px;
-    padding: 12px 24px;
+    padding: 2px 24px;
     /*font-size: 1em;*/
     cursor: pointer;
     font-family: 'Cinzel Decorative', serif;
@@ -72,4 +72,21 @@ legend {
 button:hover {
     background-color: #FF6347;
     transform: scale(1.1);
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.foreground-animate {
+    animation: moveUpDown 2s ease-in-out infinite;
+ 
 }

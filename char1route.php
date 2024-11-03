@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'char1routelogic.php'; // Include the route logic
-
+$foregroundClass = (stripos($characterName, 'Ariel') !== false || stripos($characterName, '???') !== false) ? 'foreground-animate' : '';
 // Apply hearts change directly in char1route.php
 if (isset($heartsChange)) {
     // Modify hearts while ensuring they stay within the limits
@@ -28,6 +28,8 @@ if (isset($heartsChange)) {
         $_SESSION['ending_status'] = 'good';
     }
 }
+$audioPath = "audio/select.wav"; 
+echo "<audio id='select-sound' src='$audioPath' preload='auto'></audio>";
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +82,7 @@ if (isset($heartsChange)) {
     <form method="POST">
         <div class="button-container">
             <?php foreach ($currentNode->options as $index => $option) : ?>
-                <button type="submit" name="choice" value="<?php echo $index; ?>">
+                <button type="submit" name="choice" value="<?php echo $index; ?>"onclick="document.getElementById('select-sound').play();">
                     <?php echo $option['text']; ?>
                 </button>
             <?php endforeach; ?>
@@ -88,9 +90,17 @@ if (isset($heartsChange)) {
     </form>
 </div>
 
+
+<?php if (!empty($currentNode->audioFile)): ?>
+    <audio autoplay>
+        <source src="<?php echo $currentNode->audioFile; ?>" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+<?php endif; ?>
+
 <!-- Display the character image -->
 <?php if ($foreground): ?>
-    <img class="foreground" src="<?php echo $foreground; ?>" alt="<?php echo $characterName; ?> Image">
+    <img class="foreground <?php echo $foregroundClass; ?>" src="<?php echo $foreground; ?>" alt="<?php echo $characterName; ?> Image">
 <?php endif; ?>
 
 </body>
