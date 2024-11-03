@@ -22,6 +22,10 @@ $badEndings = $_SESSION['bad_endings'];
     <link rel="stylesheet" href="css/char1ending.css"><!--link to css in href-->
 </head>
 <body>
+<audio autoplay>
+        <source src="audio/leaderboardmusic.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 <div class="game-end">Game End</div>
     <div class="endscreen"> <!--Can be styled with a class-->
         
@@ -44,9 +48,11 @@ $badEndings = $_SESSION['bad_endings'];
     <div class="options">
         <form action="char1route.php" method="post">
             <button type="submit">Restart</button>
+            <audio src="buttonsound.mp3" preload="auto"></audio>
         </form>
         <form action="home.php" method="get">
             <button type="submit">Go Back to Selection</button>
+            <audio src="buttonsound.mp3" preload="auto"></audio>
         </form>
     </div>
 </body>

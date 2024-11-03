@@ -1,6 +1,8 @@
 <?php
 session_start();
 require 'char2routelogic.php'; // Include the route logic
+$foregroundClass = (stripos($characterName, 'King') !== false || stripos($characterName, 'Prince') !== false) ? 'foreground-animate' : '';
+
 
 // Apply hearts change directly in char1route.php
 if (isset($heartsChange)) {
@@ -28,7 +30,15 @@ if (isset($heartsChange)) {
         $_SESSION['ending_status'] = 'good';
     }
 }
+$audioPath = "audio/select.wav"; 
+echo "<audio id='select-sound' src='$audioPath' preload='auto'></audio>";
+
+// After setting $currentNode
+
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +90,7 @@ if (isset($heartsChange)) {
     <form method="POST">
         <div class="button-container">
             <?php foreach ($currentNode->options as $index => $option) : ?>
-                <button type="submit" name="choice" value="<?php echo $index; ?>">
+                <button type="submit" name="choice" value="<?php echo $index; ?>"onclick="document.getElementById('select-sound').play();">
                     <?php echo $option['text']; ?>
                 </button>
             <?php endforeach; ?>
@@ -88,10 +98,22 @@ if (isset($heartsChange)) {
     </form>
 </div>
 
-<!-- Display the character image -->
-<?php if ($foreground): ?>
-    <img class="foreground" src="<?php echo $foreground; ?>" alt="<?php echo $characterName; ?> Image">
+
+<?php if (!empty($currentNode->audioFile)): ?>
+    <audio autoplay>
+        <source src="<?php echo $currentNode->audioFile; ?>" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 <?php endif; ?>
+
+<?php if ($foreground): ?>
+    <img class="foreground <?php echo $foregroundClass; ?>" src="<?php echo $foreground; ?>" alt="<?php echo $characterName; ?> Image">
+<?php endif; ?>
+
+
+
+<!-- Display the character image -->
+
 
 </body>
 </html>
