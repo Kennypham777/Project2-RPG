@@ -77,7 +77,7 @@ body {
 }
 
 
-.endscreen p:nth-last-child(2) {
+.endscreen p strong + span {
     font-size: 1.3em;
     color: #FFD700;
     font-weight: bold;

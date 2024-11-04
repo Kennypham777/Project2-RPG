@@ -32,8 +32,9 @@ $badEndings = $_SESSION['bad_endings'];
         <h1>Leaderboard</h1>
         <!--display stats of current user-->
         <p><strong>User:</strong> <?php echo htmlspecialchars($username); ?></p>
-        <p><strong>Good Endings:</strong> <?php echo $goodEndings; ?></p>
-        <p><strong>Bad Endings:</strong> <?php echo $badEndings; ?></p>
+        <p><strong>Good Endings:</strong> <span><?php echo $goodEndings; ?></span></p>
+        <p><strong>Bad Endings:</strong> <span><?php echo $badEndings; ?></span></p>
+
         
         <!-- Determine and display the ending status -->
         <?php if (isset($_SESSION['ending_status']) && $_SESSION['ending_status'] === 'bad'): ?>
